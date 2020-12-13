@@ -1,0 +1,32 @@
+{
+  "name": "Chrome Extension with React & Webpack",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icon-34.png"
+  },
+  "chrome_url_overrides": {},
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "background": {
+    "scripts": ["background.bundle.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["*://*.indeed.com/*"],
+    "js": ["contentScript.bundle.js", "popup.bundle.js"],
+    "css": ["content.styles.css"]
+  }],
+  "web_accessible_resources": [
+    "content.styles.css",
+    "icon-128.png",
+    "icon-34.png"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "oauth2": {
+    "client_id": "174667790191-ti5gi72c61dedk31568pq7cmntjnroet.apps.googleusercontent.com",
+    "scopes": ["email"]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuaT0lfoDHhgrgdzLyLpsoEHGnml471sCmz5HLOuroMk5wUMI1I1NmXbtYe+zMyPKgKxPcPc6C9QF+Me4u9CIBI+4iXw+Aaoxe4dqc0C7f2TQC//5tYvT/ON7NdIW9KbxKl9sHlAGlzKgYjQy5HUwVycfiWVHK0bDE/dtgd0qpngDWCW6j7MX08OTRAhF062N72UKP9X34dLcqAPfWK2XNRTsyW/BJYxOVTIvSctyD9ubsjF+p87FXHCAFcIXTofuW3DLAO/dpLkQDzb9HLBlndnwoRC40OAuYKDg/S49+5yjB3T7dh0QoxErnD7n6pohwOtqj6zxly6MGV/bl1jpTQIDAQAB"
+}
