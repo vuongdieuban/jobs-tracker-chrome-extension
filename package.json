@@ -1,5 +1,5 @@
 {
-  "name": "Jobs Tracker",
+  "name": "jobs-tracker",
   "version": "3.2.0",
   "description": "Jobs Tracker Chrome Extension",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "@types/chrome": "0.0.126",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "api-lib": "git+https://github.com/vuongdieuban/api-lib.git",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"
