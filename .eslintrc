@@ -1,5 +1,10 @@
 {
-  "extends": "react-app",
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "globals": {
     "chrome": "readonly"
   }

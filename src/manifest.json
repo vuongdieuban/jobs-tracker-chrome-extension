@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension with React & Webpack",
+  "name": "Jobs Tracker",
   "options_page": "options.html",
   "permissions": [
     "http://localhost:5000/",
