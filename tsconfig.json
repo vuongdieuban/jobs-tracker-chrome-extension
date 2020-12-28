@@ -15,6 +15,7 @@
     "noEmit": false,
     "jsx": "react",
     "sourceMap": true,
+    "baseUrl": "src"
   },
   "include": ["src"],
   "exclude": ["build", "node_modules"]

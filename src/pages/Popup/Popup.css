@@ -6,3 +6,14 @@
   padding: 10px;
   border: 1px solid black;
 }
+
+#main-app {
+  width: 400px;
+  height: 400px;
+}
+
+#show-button {
+  position: absolute;
+  width: 100px;
+  left: -100px;
+}

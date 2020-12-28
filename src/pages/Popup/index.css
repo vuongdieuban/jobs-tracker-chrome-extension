@@ -11,10 +11,10 @@ code {
 }
 
 #jobs-tracker-root {
-  width: 400px;
-  height: 400px;
+  /* width: 400px;
+  height: 400px; */
   position: fixed;
-  top: 0px;
+  top: 100px;
   right: 0px;
   z-index: 2147483647;
   background-color: white;

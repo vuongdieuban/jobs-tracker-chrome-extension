@@ -1,29 +1,21 @@
-import React, { DragEvent } from 'react';
-import { Person } from '../types';
+import React, { useState } from 'react';
 import './Popup.css';
-
-const createPerson = (p: Person) => {
-  return p.name.toUpperCase();
-};
+import { DropRegion } from './views/DropRegion';
 
 function App() {
-  const person = createPerson({ name: 'Ban' });
+  const [showRegion, setShowRegion] = useState(false);
 
-  const handleDrop = (e: DragEvent<HTMLDivElement>) => {
-    console.log('Dropeed');
-    e.preventDefault();
-    console.log('Drop', e);
-  };
-
-  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
+  const handleClicked = () => {
+    console.log('Button Click to show region');
+    setShowRegion(!showRegion);
   };
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <div id='div2' onDrop={handleDrop} onDragOver={handleDragOver}></div>
-      </header>
+    <div>
+      <button id='show-button' onClick={handleClicked}>
+        Show
+      </button>
+      {showRegion && <DropRegion />}
     </div>
   );
 }
