@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-import Popup from './Popup';
+import ExtensionPopup from './Popup';
 import './index.css';
 
 const app = document.createElement('div');
@@ -10,7 +10,7 @@ document.body.appendChild(app);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Popup />
+    <ExtensionPopup />
   </React.StrictMode>,
   app,
 );

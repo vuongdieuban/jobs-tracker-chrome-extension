@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import './Popup.css';
-import { DropRegion } from './views/DropRegion';
+import { App } from './views/App';
 
-function App() {
-  const [showRegion, setShowRegion] = useState(false);
+function ExtensionPopup() {
+  const [showApp, setshowApp] = useState(false);
 
   const handleClicked = () => {
-    console.log('Button Click to show region');
-    setShowRegion(!showRegion);
+    setshowApp(!showApp);
   };
 
   return (
     <div>
-      <button id='show-button' onClick={handleClicked}>
+      <button id='show-app-button' onClick={handleClicked}>
         Show
       </button>
-      {showRegion && <DropRegion />}
+      {showApp && <App />}
     </div>
   );
 }
 
-export default App;
+export default ExtensionPopup;

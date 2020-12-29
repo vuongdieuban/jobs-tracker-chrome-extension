@@ -1,4 +1,4 @@
-#div2 {
+#drop-box {
   float: left;
   width: 100px;
   height: 35px;
@@ -12,7 +12,7 @@
   height: 400px;
 }
 
-#show-button {
+#show-app-button {
   position: absolute;
   width: 100px;
   left: -100px;

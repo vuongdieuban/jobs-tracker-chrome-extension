@@ -1,6 +1,6 @@
 import React, { DragEvent } from 'react';
 
-export function DropRegion() {
+export function App() {
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
     console.log('Dropeed');
     e.preventDefault();
@@ -13,7 +13,7 @@ export function DropRegion() {
 
   return (
     <div id='main-app'>
-      <div id='div2' onDrop={handleDrop} onDragOver={handleDragOver}></div>
+      <div id='drop-box' onDrop={handleDrop} onDragOver={handleDragOver}></div>
       Hello
     </div>
   );
