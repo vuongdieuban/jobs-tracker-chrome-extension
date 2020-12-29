@@ -4,14 +4,20 @@ import { Platform } from 'api-lib/dist/dto/platform.dto';
 const Unknown = 'Unknown';
 
 export class IndeedJobPostParser {
+  private platform: Platform;
+
+  constructor(platform: Platform) {
+    this.platform = platform;
+  }
+
   // TODO: should be a factory that create platform job parser based on platform
-  public parseJobPost(element: Element, platform: Platform): JobPostCreateRequest {
+  public parseJobPost(element: Element): JobPostCreateRequest {
     const platformJobKey = element.getAttribute('data-jk') || Unknown;
 
     const titleLinkEl = element.getElementsByClassName('title').item(0)?.getElementsByTagName('a').item(0);
     const title = titleLinkEl?.getAttribute('title') || Unknown;
     const postUrl = titleLinkEl?.getAttribute('href') || Unknown;
-    const url = platform.baseUrl + postUrl;
+    const url = this.platform.baseUrl + postUrl;
 
     const location =
       element.getElementsByClassName('recJobLoc').item(0)?.getAttribute('data-rc-loc') || Unknown;
@@ -27,7 +33,7 @@ export class IndeedJobPostParser {
       location,
       url,
       platformJobKey,
-      platformId: platform.id,
+      platformId: this.platform.id,
     };
   }
 
